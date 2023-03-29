@@ -23,6 +23,13 @@ console.log(atMost(['boat', 'arc', 'cat', 'car', 'academy'], 1, startsWithA));  
 
 function atMost(array, max, cb) {
   // Your code here
+  let count = array.reduce((acc, val) => {
+    if (cb(val)) {
+      acc += 1;
+    }
+    return acc;
+  }, 0);
+  return count <= max;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

@@ -29,6 +29,12 @@ console.log(result4); // true
 
 function exactly(array, num, cb) {
   // Your code here
+  return array.reduce((acc, val) => {
+    if (cb(val)) {
+      acc += 1;
+    }
+    return acc;
+  }, 0) === num;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

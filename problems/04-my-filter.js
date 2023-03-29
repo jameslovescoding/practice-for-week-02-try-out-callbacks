@@ -21,6 +21,13 @@ console.log(result2);      // ['choose', 'words', 'only']
 
 function myFilter(array, cb) {
     // Your code here
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        if (cb(array[i])) {
+            newArray.push(array[i]);
+        }
+    }
+    return newArray;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

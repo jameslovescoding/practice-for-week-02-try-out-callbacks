@@ -33,6 +33,11 @@ console.log(
 
 let xorSelect = function(array, cb1, cb2) {
   // Your code here
+  return array.filter(val=>{
+    let res1 = cb1(val);
+    let res2 = cb2(val);
+    return (res1 && !res2) || (!res1 && res2);
+  });
 };
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
